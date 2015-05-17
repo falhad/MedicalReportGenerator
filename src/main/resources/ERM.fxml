@@ -1,0 +1,885 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" minHeight="800.0" minWidth="1100.0" nodeOrientation="RIGHT_TO_LEFT" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children><MenuBar nodeOrientation="RIGHT_TO_LEFT" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<menus>
+<Menu mnemonicParsing="false" text="فایل">
+<items>
+<MenuItem mnemonicParsing="false" text="بیمار جدید" />
+<MenuItem mnemonicParsing="false" text="مشاهده بیماران قبلی" />
+<SeparatorMenuItem mnemonicParsing="false" />
+<MenuItem mnemonicParsing="false" text="ذخیره" />
+<SeparatorMenuItem mnemonicParsing="false" />
+<MenuItem mnemonicParsing="false" text="تنظیمات" />
+<SeparatorMenuItem mnemonicParsing="false" />
+<MenuItem mnemonicParsing="false" text="خروج" />
+</items>
+</Menu>
+<Menu mnemonicParsing="false" text="ویرایش">
+<items>
+<MenuItem mnemonicParsing="false" text="Undo" />
+<MenuItem mnemonicParsing="false" text="Redo" />
+<SeparatorMenuItem mnemonicParsing="false" />
+<MenuItem mnemonicParsing="false" text="Cut" />
+<MenuItem mnemonicParsing="false" text="Copy" />
+<MenuItem mnemonicParsing="false" text="Paste" />
+<MenuItem mnemonicParsing="false" text="Delete" />
+<SeparatorMenuItem mnemonicParsing="false" />
+<MenuItem mnemonicParsing="false" text="Select All" />
+<MenuItem mnemonicParsing="false" text="Unselect All" />
+</items>
+</Menu>
+<Menu mnemonicParsing="false" text="راهنما">
+<items>
+<MenuItem mnemonicParsing="false" text="درباره ی برنامه" />
+</items>
+</Menu>
+</menus>
+</MenuBar>
+<ScrollPane fitToWidth="true" prefViewportHeight="575.0" prefViewportWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<content><VBox alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT">
+<children><GridPane alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" xmlns:fx="http://javafx.com/fxml">
+  <columnConstraints>
+<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+<children><TextField GridPane.columnIndex="1" /><Label alignment="CENTER_RIGHT" nodeOrientation="RIGHT_TO_LEFT" text="نام و نام خانوادگی" textOverrun="CLIP" />
+<TextField layoutX="410.0" layoutY="13.0" GridPane.columnIndex="1" GridPane.rowIndex="1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<Label layoutX="610.0" layoutY="17.0" text="آدرس دقیق" GridPane.rowIndex="1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<Label layoutX="610.0" layoutY="47.0" text="تلفن ثابت" GridPane.columnIndex="2" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<TextField layoutX="410.0" layoutY="43.0" GridPane.columnIndex="3" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<TextField layoutX="10.0" layoutY="13.0" GridPane.columnIndex="3" GridPane.rowIndex="1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<Label layoutX="210.0" layoutY="17.0" text="تلفن همراه" GridPane.columnIndex="2" GridPane.rowIndex="1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+</children>
+</GridPane>
+<Separator layoutX="50.0" layoutY="220.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox.margin>
+<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+</VBox.margin>
+</Separator><GridPane nodeOrientation="RIGHT_TO_LEFT" xmlns:fx="http://javafx.com/fxml">
+  <columnConstraints>
+<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+<children><Label text="سن" /><TextField GridPane.columnIndex="1" />
+<TextField layoutX="610.0" layoutY="13.0" GridPane.columnIndex="3" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<TextField layoutX="410.0" layoutY="13.0" GridPane.columnIndex="5" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<Label layoutX="310.0" layoutY="17.0" text="میزان تحصیلات" GridPane.columnIndex="6" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<TextField layoutX="210.0" layoutY="13.0" GridPane.columnIndex="7" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<TextField layoutX="10.0" layoutY="13.0" GridPane.columnIndex="1" GridPane.rowIndex="1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<Label layoutX="110.0" layoutY="17.0" text="مدت تاهل" GridPane.rowIndex="1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<TextField layoutX="610.0" layoutY="43.0" GridPane.columnIndex="3" GridPane.rowIndex="1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<TextField layoutX="410.0" layoutY="43.0" GridPane.columnIndex="5" GridPane.rowIndex="1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<Label layoutX="310.0" layoutY="47.0" text="شغل" GridPane.columnIndex="6" GridPane.rowIndex="1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<TextField layoutX="210.0" layoutY="43.0" GridPane.columnIndex="7" GridPane.rowIndex="1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<Label layoutX="110.0" layoutY="47.0" text="قد" GridPane.rowIndex="2" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<TextField layoutX="10.0" layoutY="43.0" GridPane.columnIndex="1" GridPane.rowIndex="2" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<TextField layoutX="610.0" layoutY="73.0" GridPane.columnIndex="3" GridPane.rowIndex="2" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<TextField layoutX="410.0" layoutY="73.0" GridPane.columnIndex="5" GridPane.rowIndex="2" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<TextField layoutX="210.0" layoutY="73.0" GridPane.columnIndex="7" GridPane.rowIndex="2" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<Label layoutX="310.0" layoutY="77.0" text="تعداد ساعت کار در روز" GridPane.columnIndex="6" GridPane.rowIndex="2" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<Label layoutX="110.0" layoutY="77.0" text="وزن" GridPane.rowIndex="3" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<TextField layoutX="10.0" layoutY="73.0" GridPane.columnIndex="1" GridPane.rowIndex="3" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<TextField layoutX="610.0" layoutY="103.0" GridPane.columnIndex="3" GridPane.rowIndex="3" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<TextField layoutX="410.0" layoutY="103.0" GridPane.columnIndex="5" GridPane.rowIndex="3" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<Label layoutX="310.0" layoutY="107.0" text="شغل همسر" GridPane.columnIndex="6" GridPane.rowIndex="3" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<TextField layoutX="210.0" layoutY="103.0" GridPane.columnIndex="7" GridPane.rowIndex="3" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" /><Label layoutX="710.0" layoutY="107.0" text="سن اولین قاعدگی" GridPane.columnIndex="2" GridPane.rowIndex="3" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" /><Label layoutX="710.0" layoutY="77.0" text="تعداد سقط جنین" GridPane.columnIndex="2" GridPane.rowIndex="2" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" /><Label layoutX="710.0" layoutY="47.0" text="تعداد زایمان سزارین" GridPane.columnIndex="2" GridPane.rowIndex="1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" /><Label layoutX="710.0" layoutY="17.0" text="تعداد زایمان طبیعی" GridPane.columnIndex="2" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" /><Label layoutX="510.0" layoutY="107.0" text="سن شروع یائگی" GridPane.columnIndex="4" GridPane.rowIndex="3" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" /><Label layoutX="510.0" layoutY="77.0" text="سن اولین سقط جنین" GridPane.columnIndex="4" GridPane.rowIndex="2" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" /><Label layoutX="510.0" layoutY="47.0" text="سن اولین زایمان سزارین" GridPane.columnIndex="4" GridPane.rowIndex="1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" /><Label layoutX="510.0" layoutY="17.0" text="سن اولین زایمان طبیعی" GridPane.columnIndex="4" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+</children>
+</GridPane><Separator prefWidth="200.0">
+<VBox.margin>
+<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+</VBox.margin></Separator><GridPane alignment="CENTER_RIGHT" nodeOrientation="RIGHT_TO_LEFT" xmlns:fx="http://javafx.com/fxml">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.0" minWidth="10.0" prefWidth="304.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="530.0" minWidth="10.0" prefWidth="496.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" />
+<RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="20.0" prefHeight="45.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+<children><Label contentDisplay="RIGHT" prefHeight="17.0" prefWidth="162.0" text="1 - وظعیت تاهل شما چیست ؟" /><FlowPane alignment="CENTER_LEFT" hgap="20.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+<children><RadioButton mnemonicParsing="false" text="مجرد">
+<toggleGroup>
+<ToggleGroup fx:id="q1" />
+</toggleGroup></RadioButton>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="متاهل" toggleGroup="$q1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="مطلقه" toggleGroup="$q1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="همسر فوت شده" toggleGroup="$q1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+</children></FlowPane>
+<Label contentDisplay="RIGHT" layoutX="410.0" layoutY="17.0" prefHeight="17.0" text="2 - مدت عادت ماهیانه شما در سال اخیر کدام است ؟" GridPane.rowIndex="1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton mnemonicParsing="false" text="کمتر از 5 روز">
+<toggleGroup>
+<ToggleGroup />
+</toggleGroup>
+</RadioButton>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="6 تا 7 روز" toggleGroup="$q1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="8 تا 10 روز" toggleGroup="$q1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="بیش از 10 روز" toggleGroup="$q1" />
+</children>
+</FlowPane>
+<Label contentDisplay="RIGHT" layoutX="410.0" layoutY="47.0" prefHeight="17.0" text="3 - چند ماه از آخرین پریود شما می گذرد ؟" GridPane.rowIndex="2" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="40.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton mnemonicParsing="false" text="کمتر از 1 ماه">
+<toggleGroup>
+<ToggleGroup />
+</toggleGroup>
+</RadioButton>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="1 تا 2 ماه" toggleGroup="$q1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="3 تا 12 ماه" toggleGroup="$q1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="بیشتر از 12 ماه" toggleGroup="$q1" />
+</children>
+</FlowPane>
+<Label contentDisplay="RIGHT" layoutX="410.0" layoutY="77.0" prefHeight="17.0" text="4-آیا از خانواده شما مبتلا به سرطان پستان وجود دارد؟" GridPane.rowIndex="3" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="70.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="وجود ندارد." xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<toggleGroup>
+<ToggleGroup />
+</toggleGroup>
+</RadioButton>
+<RadioButton contentDisplay="RIGHT" layoutX="180.0" layoutY="10.0" mnemonicParsing="false" text="فامیل درجه 3" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<toggleGroup>
+<ToggleGroup />
+</toggleGroup>
+</RadioButton>
+<RadioButton layoutX="224.0" layoutY="10.0" mnemonicParsing="false" text="عمه یا خاله" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<toggleGroup>
+<ToggleGroup />
+</toggleGroup>
+</RadioButton>
+<RadioButton layoutX="268.0" layoutY="10.0" mnemonicParsing="false" text="دایی یا عمو" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<toggleGroup>
+<ToggleGroup />
+</toggleGroup>
+</RadioButton>
+<RadioButton layoutX="312.0" layoutY="10.0" mnemonicParsing="false" text="خواهر" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<toggleGroup>
+<ToggleGroup />
+</toggleGroup>
+</RadioButton>
+<RadioButton mnemonicParsing="false" text="برادر">
+<toggleGroup>
+<ToggleGroup />
+</toggleGroup>
+</RadioButton>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="فرزند" toggleGroup="$q1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="مادر" toggleGroup="$q1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="پدر" toggleGroup="$q1" />
+</children>
+</FlowPane>
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="98.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="استفاده نمی کنم." toggleGroup="$q1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="سفید آب مروارید" toggleGroup="$q1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="اسپری" toggleGroup="$q1" />
+</children>
+</FlowPane>
+<Label contentDisplay="RIGHT" layoutX="410.0" layoutY="107.0" prefHeight="17.0" text="5- ضد عرق برای زیر بغل شما چیست؟" GridPane.rowIndex="4" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<Label contentDisplay="RIGHT" layoutX="410.0" layoutY="137.0" prefHeight="17.0" text="6- آیا در معرض دود سیگار هستید؟" GridPane.rowIndex="5" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="130.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="به ندرت" toggleGroup="$q1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="1 تا 2 روز در هفته" toggleGroup="$q1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="3 تا 4 روز در هفته" toggleGroup="$q1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="تقریبا همیشه " toggleGroup="$q1" />
+</children>
+</FlowPane>
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="160.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="به ندرت" toggleGroup="$q1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="بیشتر از 10 سال" toggleGroup="$q1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="6 تا 10 سال" toggleGroup="$q1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="1تا 5 سال" toggleGroup="$q1" />
+</children>
+</FlowPane>
+<Label contentDisplay="RIGHT" layoutX="410.0" layoutY="167.0" prefHeight="17.0" text="7- چه مدتی در معرض دود سیگار بوده اید؟" GridPane.rowIndex="6" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="190.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="به ندرت" toggleGroup="$q1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="1 تا 2 بار در ماه" toggleGroup="$q1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="1تا 2 بار در هفته" toggleGroup="$q1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="تقریبا همیشه" toggleGroup="$q1" />
+</children>
+</FlowPane>
+<Label contentDisplay="RIGHT" layoutX="410.0" layoutY="197.0" prefHeight="17.0" text="8- آیا در عرض دود قلیان هستید؟" GridPane.rowIndex="7" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="220.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="به ندرت" toggleGroup="$q1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="1 تا 2 بار در ماه" toggleGroup="$q1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="1تا 2 بار در هفته" toggleGroup="$q1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="تقریبا همیشه" toggleGroup="$q1" />
+</children>
+</FlowPane>
+<Label contentDisplay="RIGHT" layoutX="410.0" layoutY="227.0" prefHeight="17.0" text="9- چه مدتی در عرض دود قلیان بوده اید؟" GridPane.rowIndex="8" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<Label contentDisplay="RIGHT" layoutX="410.0" layoutY="257.0" prefHeight="17.0" text="10- آیا ورزش می کنید؟" GridPane.rowIndex="9" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="250.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="به ندرت" toggleGroup="$q1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="1 تا 2 بار در هفته" toggleGroup="$q1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="3 تا 4 بار در هفته" toggleGroup="$q1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="هر روز" toggleGroup="$q1" />
+</children>
+</FlowPane>
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="280.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="ورزش حرفه ای" toggleGroup="$q1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="ورزش گروهی" toggleGroup="$q1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="دویدن آرام" toggleGroup="$q1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="پیاده روی" toggleGroup="$q1" />
+</children>
+</FlowPane>
+<Label contentDisplay="RIGHT" layoutX="410.0" layoutY="287.0" prefHeight="17.0" text="11- چگونه ورزش می کنید؟" GridPane.rowIndex="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="310.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="11" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="ساعت 2 به بعد" toggleGroup="$q1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="ساعت 12 تا 2" toggleGroup="$q1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="ساعت 10 تا 12" toggleGroup="$q1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="قبل از ساعت 10 شب" toggleGroup="$q1" />
+</children>
+</FlowPane>
+<Label contentDisplay="RIGHT" layoutX="410.0" layoutY="317.0" prefHeight="17.0" text="12- شب ها در چه ساعتی می خوابید؟" GridPane.rowIndex="11" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<Label contentDisplay="RIGHT" layoutX="410.0" layoutY="347.0" prefHeight="17.0" text="13- صبح ها در چه ساعتی از خواب بیدار می شوید؟" GridPane.rowIndex="12" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="338.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="12" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="ساعت ۱۰  به بعد" toggleGroup="$q1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="ساعت۸ تا ۱۰" toggleGroup="$q1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="ساعت ۶ تا ۸" toggleGroup="$q1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="ساعت ۴ تا ۶" toggleGroup="$q1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="قبل از ساعت 4 صبح" toggleGroup="$q1" />
+</children>
+</FlowPane>
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="368.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="13" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="بیشتر از ۸ شب در ماه" toggleGroup="$q1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="۶ تا ۸ شب در ماه" toggleGroup="$q1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="۵ تا ۶ شب در ماه" toggleGroup="$q1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="۳ تا ۴ شب در ماه" toggleGroup="$q1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="۱ تا ۲ شب در ماه " toggleGroup="$q1" />
+</children>
+</FlowPane>
+<Label contentDisplay="RIGHT" layoutX="410.0" layoutY="377.0" prefHeight="17.0" text="۱۴- اگر شاغل هستید آیا شیفت شب دارید؟" GridPane.rowIndex="13" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<Label contentDisplay="RIGHT" layoutX="410.0" layoutY="407.0" prefHeight="17.0" text="۱۵ - در کدام منطقه زندگی می کنید؟" GridPane.rowIndex="14" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="398.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="14" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="روستا" toggleGroup="$q1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="حاشیه شهر" toggleGroup="$q1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="بالای شهر" toggleGroup="$q1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="مرکز شهر" toggleGroup="$q1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="منطقه صنعتی" toggleGroup="$q1" />
+</children>
+</FlowPane>
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="430.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="15" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="به ندرت" toggleGroup="$q1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="۱ تا ۲ لیوان در هفته" toggleGroup="$q1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="۳ تا ۴ روز در هفته" toggleGroup="$q1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="تقریبا همیشه" toggleGroup="$q1" />
+</children>
+</FlowPane>
+<Label contentDisplay="RIGHT" layoutX="410.0" layoutY="437.0" prefHeight="17.0" text="۱۶ - آیا در آشپزخانه از ماکروفر استفاده می کنید ؟" GridPane.rowIndex="15" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<Label contentDisplay="RIGHT" layoutX="410.0" layoutY="467.0" prefHeight="17.0" text="۱۷ - چند لیوان شیر در هفته می خورید ؟" GridPane.rowIndex="16" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="460.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="16" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="به ندرت" toggleGroup="$q1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="۱ تا ۲ لیوان در هفته" toggleGroup="$q1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="۳ تا ۴ لیوان در هفته" toggleGroup="$q1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="5 تا ۷ لیوان در هفته" toggleGroup="$q1" />
+</children>
+</FlowPane>
+<Label contentDisplay="RIGHT" layoutX="410.0" layoutY="497.0" prefHeight="17.0" text="۱۸ - آیا همراه با غذا ماست می خورید ؟" GridPane.rowIndex="17" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="488.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="17" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="به ندرت" toggleGroup="$q1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="۱ تا ۲ بار در هفته" toggleGroup="$q1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="۳ تا ۴ بار در هفته" toggleGroup="$q1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="هر روز" toggleGroup="$q1" />
+</children>
+</FlowPane>
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="520.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="18" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="به ندرت" toggleGroup="$q1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="هر ۱۰ روز یک بار در هفته" toggleGroup="$q1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="۱ تا ۲ بار در هفته" toggleGroup="$q1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="۳ تا ۴ بار در هفته" toggleGroup="$q1" />
+</children>
+</FlowPane>
+<Label contentDisplay="RIGHT" layoutX="410.0" layoutY="527.0" prefHeight="17.0" text="۱۹ - آیا غذای آماده مانند ساندویچ میخورید ؟" GridPane.rowIndex="18" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<Label contentDisplay="RIGHT" layoutX="410.0" layoutY="557.0" prefHeight="17.0" text="۲۰ - بیشتر از کدام برنج استفاده می کنید ؟" GridPane.rowIndex="19" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="548.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="19" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="سایر" toggleGroup="$q1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="ایرانی" toggleGroup="$q1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="برنج تایلندی" toggleGroup="$q1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="برنج پاکستانی" toggleGroup="$q1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="برنج هندی" toggleGroup="$q1" />
+</children>
+</FlowPane>
+<Label contentDisplay="RIGHT" layoutX="410.0" layoutY="587.0" prefHeight="17.0" text="۲۱ - سبزی را هر چند وقت می خورید ؟" GridPane.rowIndex="20" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="578.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="20" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="به ندرت" toggleGroup="$q1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="هر ۱۰ روز  " toggleGroup="$q1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="۱ تا ۲ بار در هفته" toggleGroup="$q1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="۳ تا ۴ بار در هفته" toggleGroup="$q1" />
+<RadioButton layoutX="242.0" layoutY="10.0" mnemonicParsing="false" text="هر روز" toggleGroup="$q1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+</children>
+</FlowPane>
+<Label contentDisplay="RIGHT" layoutX="410.0" layoutY="617.0" prefHeight="17.0" text="۲۲ - میوه را هر چند وقت می خورید ؟" GridPane.rowIndex="21" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="610.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="21" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="به ندرت" toggleGroup="$q1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="هر ۱۰ روز  " toggleGroup="$q1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="۱ تا ۲ بار در هفته" toggleGroup="$q1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="۳ تا ۴ بار در هفته" toggleGroup="$q1" />
+<RadioButton layoutX="242.0" layoutY="10.0" mnemonicParsing="false" text="هر روز" toggleGroup="$q1" />
+</children>
+</FlowPane>
+<Label contentDisplay="RIGHT" layoutX="410.0" layoutY="647.0" prefHeight="17.0" text="۲۳ - کدام نوع روغن را مصرف میکنید ؟" GridPane.rowIndex="22" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="638.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="22" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="کره" toggleGroup="$q1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="روغن حیوانی" toggleGroup="$q1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="روغن مایع" toggleGroup="$q1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="روغن نباتی جامد" toggleGroup="$q1" />
+</children>
+</FlowPane>
+<Label contentDisplay="RIGHT" layoutX="410.0" layoutY="677.0" prefHeight="17.0" text="۲۴ - شیرینی را هر چند وقت میخورید ؟" GridPane.rowIndex="23" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="640.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="23" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="به ندرت" toggleGroup="$q1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="هر ۱۰ روز  " toggleGroup="$q1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="۱ تا ۲ بار در هفته" toggleGroup="$q1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="۳ تا ۴ بار در هفته" toggleGroup="$q1" />
+<RadioButton layoutX="242.0" layoutY="10.0" mnemonicParsing="false" text="هر روز" toggleGroup="$q1" />
+</children>
+</FlowPane>
+<Label contentDisplay="RIGHT" layoutX="410.0" layoutY="707.0" prefHeight="17.0" text="۲۵ - گوشت قرمز را هر چند وقت میخورید ؟" GridPane.rowIndex="24" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="24" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="به ندرت" toggleGroup="$q1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="هر ۱۰ روز  " toggleGroup="$q1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="۱ تا ۲ بار در هفته" toggleGroup="$q1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="۳ تا ۴ بار در هفته" toggleGroup="$q1" />
+<RadioButton layoutX="242.0" layoutY="10.0" mnemonicParsing="false" text="هر روز" toggleGroup="$q1" />
+</children>
+</FlowPane>
+<Label contentDisplay="RIGHT" layoutX="410.0" layoutY="737.0" prefHeight="17.0" text="۲۶ - گوشت مرغ را هر چند وقت میخورید ؟" GridPane.rowIndex="25" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="25" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="به ندرت" toggleGroup="$q1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="هر ۱۰ روز  " toggleGroup="$q1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="۱ تا ۲ بار در هفته" toggleGroup="$q1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="۳ تا ۴ بار در هفته" toggleGroup="$q1" />
+<RadioButton layoutX="242.0" layoutY="10.0" mnemonicParsing="false" text="هر روز" toggleGroup="$q1" />
+</children>
+</FlowPane>
+<Label contentDisplay="RIGHT" layoutX="410.0" layoutY="767.0" prefHeight="17.0" text="۲۷ - گوشت ماهی را هر چند وقت میخورید ؟" GridPane.rowIndex="26" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="26" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="به ندرت" toggleGroup="$q1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="هر ۱۰ روز  " toggleGroup="$q1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="۱ تا ۲ بار در هفته" toggleGroup="$q1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="۳ تا ۴ بار در هفته" toggleGroup="$q1" />
+<RadioButton layoutX="242.0" layoutY="10.0" mnemonicParsing="false" text="هر روز" toggleGroup="$q1" />
+</children>
+</FlowPane>
+<Label contentDisplay="RIGHT" layoutX="410.0" layoutY="797.0" prefHeight="17.0" text="۲۸ - آیا از لوازم آرایش استفاده میکنید ؟" GridPane.rowIndex="27" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="788.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="27" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="به ندرت" toggleGroup="$q1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="۱ تا ۲ روز در هفته" toggleGroup="$q1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="۳ تا ۴ روز در هفته" toggleGroup="$q1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="تقریبا همیشه" toggleGroup="$q1" />
+</children>
+</FlowPane>
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="818.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="28" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="مرگ نزدیکان" toggleGroup="$q1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="مرگ برادر یا خواهر" toggleGroup="$q1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="مرگ فرزند" toggleGroup="$q1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="مرگ مادر" toggleGroup="$q1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="مرگ پدر" toggleGroup="$q1" />
+</children>
+</FlowPane>
+<Label contentDisplay="RIGHT" layoutX="410.0" layoutY="827.0" prefHeight="17.0" text="۲۹ - کدام واقعه ناگوار را داشته اید ؟" GridPane.rowIndex="28" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="848.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="29" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="مشکلات قانونی فرزند" toggleGroup="$q1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="بیماری شدید فرزند" toggleGroup="$q1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="اعتیاد فرزند" toggleGroup="$q1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="بیکاری فرزند" toggleGroup="$q1" />
+<RadioButton layoutX="10.0" layoutY="27.0" mnemonicParsing="false" text="بیکاری همسر" toggleGroup="$q1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RadioButton layoutX="255.0" layoutY="10.0" mnemonicParsing="false" text="اعتیاد همسر" toggleGroup="$q1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RadioButton layoutX="141.0" layoutY="10.0" mnemonicParsing="false" text="بیماری شدید همسر" toggleGroup="$q1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="مشکلات قانونی همسر" toggleGroup="$q1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+</children>
+</FlowPane>
+<Label contentDisplay="RIGHT" layoutX="410.0" layoutY="857.0" prefHeight="17.0" text="۳۰ - کدام مشکل را داشته اید ؟" GridPane.rowIndex="29" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<Label contentDisplay="RIGHT" layoutX="410.0" layoutY="887.0" prefHeight="17.0" text="۳۱ - رابطه عاطفی با همسرتان چگونه است ؟" GridPane.rowIndex="30" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="878.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="30" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="در قید حیات نیستند" toggleGroup="$q1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="بد" toggleGroup="$q1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="متوسط" toggleGroup="$q1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="خوب" toggleGroup="$q1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="عالی" toggleGroup="$q1" />
+</children>
+</FlowPane>
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="910.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="31" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="در قید حیات نیستند" toggleGroup="$q1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="بد" toggleGroup="$q1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="متوسط" toggleGroup="$q1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="خوب" toggleGroup="$q1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="عالی" toggleGroup="$q1" />
+</children>
+</FlowPane>
+<Label contentDisplay="RIGHT" layoutX="410.0" layoutY="917.0" prefHeight="17.0" text="۳۲ - رابطه عاطفی شما با والدین چگونه است ؟" GridPane.rowIndex="31" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<Label contentDisplay="RIGHT" layoutX="410.0" layoutY="947.0" prefHeight="17.0" text="۳۳ - معمولا جنس پارچه سوتین شما چیست ؟" GridPane.rowIndex="32" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="938.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="32" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="استفاده نمیکنم" toggleGroup="$q1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="الیاف مصنوعی مانند ساتن" toggleGroup="$q1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="الیاف طبیعی مانند نخ و پنبه" toggleGroup="$q1" />
+</children>
+</FlowPane>
+<Label contentDisplay="RIGHT" layoutX="410.0" layoutY="977.0" prefHeight="17.0" text="۳۴ - در آمد ماهانه خانواده شما کدام است ؟" GridPane.rowIndex="33" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="968.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="33" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="بیش از ۳ میلیون تومان" toggleGroup="$q1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="۲ تا ۳ میلیون تومان" toggleGroup="$q1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="یک تا ۲ میلیون تومان" toggleGroup="$q1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="۵۰۰ هزار تا یک میلیون تومان" toggleGroup="$q1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="زیر ۵۰۰ هزار تومان" toggleGroup="$q1" />
+</children>
+</FlowPane>
+</children>
+</GridPane>
+<Separator layoutX="10.0" layoutY="190.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox.margin>
+<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+</VBox.margin></Separator><GridPane alignment="CENTER_RIGHT" xmlns:fx="http://javafx.com/fxml">
+  <columnConstraints>
+<ColumnConstraints hgrow="SOMETIMES" maxWidth="460.0" minWidth="10.0" prefWidth="242.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="394.0" minWidth="10.0" prefWidth="79.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="555.0" minWidth="10.0" prefWidth="479.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="80.0" minHeight="60.0" prefHeight="70.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="80.0" minHeight="60.0" prefHeight="70.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="80.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+<RowConstraints maxHeight="80.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+<RowConstraints maxHeight="80.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints maxHeight="80.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints maxHeight="80.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints maxHeight="80.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints maxHeight="80.0" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints prefHeight="80.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints maxHeight="80.0" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints maxHeight="25.0" minHeight="120.0" prefHeight="120.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+  </rowConstraints>
+<children><Label text="تعداد ماموگرافی قبلی ؟" /><VBox prefHeight="34.0" prefWidth="203.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+<children><Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="تعداد" />
+<Label contentDisplay="RIGHT" layoutX="10.0" layoutY="10.0" text="توضیح" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox.margin>
+<Insets />
+</VBox.margin>
+</Label>
+</children>
+<GridPane.margin>
+<Insets />
+</GridPane.margin></VBox><VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+<children><TextField />
+<TextField layoutX="10.0" layoutY="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox.margin>
+<Insets />
+</VBox.margin>
+</TextField>
+</children>
+<GridPane.margin>
+<Insets />
+</GridPane.margin></VBox><Label text="نوع قرص ضدبارداری مصرفی ؟" GridPane.rowIndex="1" />
+<Label layoutX="574.0" layoutY="101.0" text="مدت مصرف قرص ضد بارداری ؟" GridPane.rowIndex="2" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" /><FlowPane alignment="CENTER_LEFT" hgap="20.0" prefHeight="200.0" prefWidth="200.0" vgap="10.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+<children>
+<RadioButton layoutX="271.0" layoutY="10.0" mnemonicParsing="false" text="مصرف نمی کند" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" /><Label text="اگر مصرف می کنید، نوع قرص :" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="HD" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="LD" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" /><RadioButton mnemonicParsing="false" text="سایر">
+<graphic><TextField />
+</graphic></RadioButton>
+</children></FlowPane>
+<FlowPane alignment="CENTER_LEFT" columnHalignment="CENTER" hgap="20.0" layoutX="10.0" layoutY="77.0" prefHeight="200.0" prefWidth="200.0" vgap="10.0" GridPane.columnIndex="2" GridPane.rowIndex="2" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="252.0" layoutY="10.0" mnemonicParsing="false" text="کمتر از یک سال" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RadioButton layoutX="177.0" layoutY="10.0" mnemonicParsing="false" text="۱ تا ۵ سال" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RadioButton layoutX="102.0" layoutY="10.0" mnemonicParsing="false" text="۶ تا ۱۰ سال" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="۱۱ تا ۱۵ سال" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="بیش از ۱۵ سال" />
+</children>
+</FlowPane><Label text="هیستروکتومی ؟" GridPane.rowIndex="3" />
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="77.0" prefHeight="200.0" prefWidth="200.0" vgap="10.0" GridPane.columnIndex="2" GridPane.rowIndex="3" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="271.0" layoutY="10.0" mnemonicParsing="false" text="ندارد" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="دارد" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" /><TextField promptText="چه زمانی ؟" />
+</children>
+</FlowPane>
+<Label layoutX="574.0" layoutY="167.0" text="جایگزینی هورمون HRT" GridPane.rowIndex="4" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="268.0" layoutY="167.0" prefHeight="200.0" prefWidth="200.0" vgap="10.0" GridPane.columnIndex="2" GridPane.rowIndex="4" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="271.0" layoutY="10.0" mnemonicParsing="false" text="ندارد" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="دارد" />
+<TextField promptText="چه مدت ؟" />
+</children>
+</FlowPane>
+<Label layoutX="574.0" layoutY="170.0" text="تو رفتگی نوک سینه  N/R" GridPane.rowIndex="5" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="166.0" prefHeight="200.0" prefWidth="200.0" vgap="10.0" GridPane.columnIndex="2" GridPane.rowIndex="5" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="جدید" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="اگر دارد :           قدیمی" />
+<RadioButton layoutX="271.0" layoutY="10.0" mnemonicParsing="false" text="ندارد" />
+</children>
+</FlowPane>
+<Label layoutX="574.0" layoutY="31.0" text="درد ؟" GridPane.rowIndex="6" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" /><RadioButton mnemonicParsing="false" text="ندارد" GridPane.columnIndex="1" GridPane.rowIndex="6" /><GridPane GridPane.columnIndex="2" GridPane.rowIndex="6" xmlns:fx="http://javafx.com/fxml">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+<children><Label text="اگر دارد چه مدت ؟" />
+<Label layoutX="10.0" layoutY="17.0" text="اگر دارد چه اندازه ؟" GridPane.rowIndex="1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<Label layoutX="10.0" layoutY="17.0" text="اگر دارد چطور ؟" GridPane.rowIndex="2" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" /><TextField GridPane.columnIndex="1" /><FlowPane alignment="CENTER_LEFT" hgap="20.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+<children><RadioButton mnemonicParsing="false" text="کم" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="متوسط" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RadioButton layoutX="45.0" layoutY="10.0" mnemonicParsing="false" text="زیاد" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+</children></FlowPane><FlowPane alignment="CENTER_LEFT" hgap="20.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+<children>
+<RadioButton layoutX="65.0" layoutY="17.0" mnemonicParsing="false" text="در یک ناحیه" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RadioButton layoutX="10.0" layoutY="17.0" mnemonicParsing="false" text="منتشر" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+</children></FlowPane>
+</children>
+</GridPane>
+<RadioButton layoutX="203.0" layoutY="347.0" mnemonicParsing="false" text="ندارد" GridPane.columnIndex="1" GridPane.rowIndex="7" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<Label layoutX="10.0" layoutY="347.0" text="ترشح ؟" GridPane.rowIndex="7" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<GridPane layoutX="268.0" layoutY="310.0" GridPane.columnIndex="2" GridPane.rowIndex="7" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<Label text="اگر دارد چطور ؟" />
+<Label layoutX="10.0" layoutY="17.0" text="اگر دارد چه رنگ ؟" GridPane.rowIndex="1" />
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+<children>
+<RadioButton mnemonicParsing="false" text="خونی" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="سفید و شیری" />
+<RadioButton layoutX="45.0" layoutY="10.0" mnemonicParsing="false" text="سبز و سیاه" />
+<RadioButton layoutX="186.0" layoutY="17.0" mnemonicParsing="false" text="قهوه ای یا صورتی" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RadioButton layoutX="10.0" layoutY="27.0" mnemonicParsing="false" text="بیرنگ" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+</children>
+</FlowPane>
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="281.0" layoutY="40.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton mnemonicParsing="false" text="خود به خود" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="با فشار" />
+</children>
+</FlowPane>
+</children>
+<columnConstraints>
+<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+</columnConstraints>
+<rowConstraints>
+<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+</rowConstraints>
+</GridPane>
+<Label layoutX="10.0" layoutY="422.0" text="توده ؟" GridPane.rowIndex="8" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" /><RadioButton mnemonicParsing="false" text="ندارد" GridPane.columnIndex="1" GridPane.rowIndex="8" /><FlowPane alignment="CENTER_LEFT" hgap="20.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="8">
+<children>
+<RadioButton layoutX="203.0" layoutY="472.0" mnemonicParsing="false" text="دارد" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" /><Label text="توضیح ؟" /><TextField nodeOrientation="RIGHT_TO_LEFT" prefWidth="350.0" />
+</children></FlowPane>
+<Label layoutX="10.0" layoutY="472.0" text="سفتی قابل لمس؟" GridPane.rowIndex="9" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="268.0" layoutY="460.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="9" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="203.0" layoutY="472.0" mnemonicParsing="false" text="دارد" />
+<Label text="توضیح ؟" />
+<TextField nodeOrientation="RIGHT_TO_LEFT" prefWidth="350.0" />
+</children>
+</FlowPane>
+<RadioButton layoutX="203.0" layoutY="472.0" mnemonicParsing="false" text="ندارد" GridPane.columnIndex="1" GridPane.rowIndex="9" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" /><GridPane GridPane.columnIndex="2" GridPane.rowIndex="10" xmlns:fx="http://javafx.com/fxml">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="150.0" />
+    <ColumnConstraints hgrow="SOMETIMES" />
+<ColumnConstraints hgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<ColumnConstraints hgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<ColumnConstraints hgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<ColumnConstraints hgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<ColumnConstraints hgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="48.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+<children><Label text="فرزند" />
+<Label layoutX="10.0" layoutY="22.0" text="مدت شیردهی به ماه" GridPane.rowIndex="1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<Label layoutX="10.0" layoutY="62.0" text="اول" GridPane.columnIndex="1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<Label layoutX="10.0" layoutY="22.0" text="دوم" GridPane.columnIndex="2" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<Label layoutX="10.0" layoutY="22.0" text="سوم" GridPane.columnIndex="3" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<Label layoutX="10.0" layoutY="22.0" text="چهارم" GridPane.columnIndex="4" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<Label layoutX="10.0" layoutY="22.0" text="پنجم" GridPane.columnIndex="5" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<Label layoutX="10.0" layoutY="22.0" text="ششم" GridPane.columnIndex="6" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" /><TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+<TextField layoutX="122.0" layoutY="56.0" GridPane.columnIndex="2" GridPane.rowIndex="1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<TextField layoutX="10.0" layoutY="16.0" GridPane.columnIndex="3" GridPane.rowIndex="1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<TextField layoutX="10.0" layoutY="16.0" GridPane.columnIndex="4" GridPane.rowIndex="1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<TextField layoutX="10.0" layoutY="16.0" GridPane.columnIndex="5" GridPane.rowIndex="1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<TextField layoutX="10.0" layoutY="16.0" GridPane.columnIndex="6" GridPane.rowIndex="1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+</children>
+</GridPane><Label text="مدت شیردهی برای نوزادان چند ماه است ؟" GridPane.rowIndex="10" />
+<Label layoutX="10.0" layoutY="623.0" text="علت قطع قاعدگی طبیعی شما چه بوده است ؟" GridPane.rowIndex="11" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" /><FlowPane hgap="20.0" prefHeight="200.0" prefWidth="200.0" vgap="10.0" GridPane.columnIndex="2" GridPane.rowIndex="11">
+<children><RadioButton mnemonicParsing="false" text="یائسگی طبیعی" />
+<RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="یائسگی زودرس" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RadioButton layoutX="97.0" layoutY="10.0" mnemonicParsing="false" text="برداشتن رحم" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RadioButton layoutX="184.0" layoutY="10.0" mnemonicParsing="false" text="سایر علل با ذکر نوع " xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<graphic><TextField prefWidth="300.0" />
+</graphic>
+</RadioButton>
+</children></FlowPane>
+<Label layoutX="10.0" layoutY="632.0" text="آیا به موارد خاصی حساسیت یا آلرژی دارد ؟" GridPane.rowIndex="12" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" /><VBox GridPane.columnIndex="1" GridPane.rowIndex="12">
+<children><Label text="نوع حساسیت" /><Label text="مدت حساسیت">
+<VBox.margin>
+<Insets top="20.0" />
+</VBox.margin></Label>
+</children></VBox><VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="12">
+<children><TextField /><TextField>
+<VBox.margin>
+<Insets top="10.0" />
+</VBox.margin></TextField>
+</children></VBox><Label text="برای مدت طولانی داروی خاصی را مصرف می کند ؟" GridPane.rowIndex="13" />
+<VBox GridPane.columnIndex="1" GridPane.rowIndex="13" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children><Label text="نوع دارو :" GridPane.columnIndex="1" GridPane.rowIndex="13">
+<padding>
+<Insets top="10.0" />
+</padding></Label><Label text="میزان مصرف :" GridPane.columnIndex="1" GridPane.rowIndex="13">
+<padding>
+<Insets top="20.0" />
+</padding></Label><Label text="مدت مصرف :" GridPane.columnIndex="1" GridPane.rowIndex="13">
+<padding>
+<Insets top="20.0" />
+</padding></Label>
+</children>
+</VBox>
+<VBox layoutX="410.0" layoutY="700.0" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="13" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<TextField>
+<VBox.margin>
+<Insets top="10.0" />
+</VBox.margin>
+</TextField>
+<TextField>
+<VBox.margin>
+<Insets top="10.0" />
+</VBox.margin>
+</TextField>
+<TextField layoutX="10.0" layoutY="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox.margin>
+<Insets top="10.0" />
+</VBox.margin>
+</TextField>
+</children>
+</VBox>
+<Label layoutX="10.0" layoutY="472.0" text="آیا سابقه هرگونه عمل جراحی را دارد ؟" GridPane.rowIndex="14" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="410.0" layoutY="460.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="14" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="203.0" layoutY="472.0" mnemonicParsing="false" text="دارد" />
+<Label text="توضیح ؟" />
+<TextField nodeOrientation="RIGHT_TO_LEFT" prefWidth="350.0" />
+</children>
+</FlowPane>
+<RadioButton layoutX="292.0" layoutY="472.0" mnemonicParsing="false" text="ندارد" GridPane.columnIndex="1" GridPane.rowIndex="14" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<FlowPane alignment="CENTER_LEFT" hgap="20.0" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="15" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<RadioButton layoutX="203.0" layoutY="472.0" mnemonicParsing="false" text="دارد" />
+<Label text="توضیح ؟" />
+<TextField nodeOrientation="RIGHT_TO_LEFT" prefWidth="350.0" />
+</children>
+</FlowPane>
+<RadioButton layoutX="10.0" layoutY="37.0" mnemonicParsing="false" text="ندارد" GridPane.columnIndex="1" GridPane.rowIndex="15" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<Label layoutX="10.0" layoutY="37.0" text="جراحی سینه قبلی ؟" GridPane.rowIndex="15" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" /><VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="16">
+<children>
+<Label layoutX="10.0" layoutY="937.0" text="آیا از خانواده شما مبتلا به هر نوع سرطان وجود دارد ؟" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<Label layoutX="10.0" layoutY="10.0" text="(مانند سرطان تخمدان ، پرستات ، گوارش و غیره)" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+</children></VBox><GridPane GridPane.columnIndex="2" GridPane.rowIndex="16" xmlns:fx="http://javafx.com/fxml">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="254.0" minWidth="10.0" prefWidth="164.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="354.0" minWidth="10.0" prefWidth="354.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+<children>
+<RadioButton layoutX="292.0" layoutY="472.0" mnemonicParsing="false" text="وجود ندارد" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" /><Label text="اگر دارد ، نوع سرطان چیست ؟" GridPane.rowIndex="1" /><Label text="نسبت با مراجعه کننده :" GridPane.rowIndex="2" /><TextField GridPane.columnIndex="1" GridPane.rowIndex="1" /><TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+</children>
+</GridPane>
+<VBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="960.0" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="17" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<Label layoutX="10.0" layoutY="937.0" text="آیا قبلا سابقه بیماری و ضایعه پستان داشته است  ؟ " />
+<Label layoutX="10.0" layoutY="10.0" text="(مانند آبسه ، عفونت پستان)" />
+</children>
+</VBox>
+<RadioButton layoutX="292.0" layoutY="907.0" mnemonicParsing="false" text="ندارد" GridPane.columnIndex="1" GridPane.rowIndex="17" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<GridPane layoutX="410.0" layoutY="960.0" GridPane.columnIndex="2" GridPane.rowIndex="17" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<Label text="اگر دارد ، نوع چیست ؟" />
+<Label alignment="TOP_LEFT" text="چند بار  :" GridPane.rowIndex="1" />
+<TextField GridPane.columnIndex="1" /><FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+<children>
+<TextField layoutX="129.0" layoutY="28.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" /><Label text="چند وقت پیش :" />
+<TextField layoutX="10.0" layoutY="28.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+</children></FlowPane>
+</children>
+<columnConstraints>
+<ColumnConstraints hgrow="SOMETIMES" maxWidth="254.0" minWidth="10.0" prefWidth="119.0" />
+<ColumnConstraints hgrow="SOMETIMES" maxWidth="399.0" minWidth="10.0" prefWidth="399.0" />
+</columnConstraints>
+<rowConstraints>
+<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+</rowConstraints>
+</GridPane>
+<VBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="1080.0" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="18" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<Label layoutX="10.0" layoutY="937.0" text="آیا سابقه تروما به پستان داشته است ؟" />
+</children>
+</VBox>
+<RadioButton layoutX="292.0" layoutY="1132.0" mnemonicParsing="false" text="ندارد" GridPane.columnIndex="1" GridPane.rowIndex="18" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<GridPane layoutX="410.0" layoutY="1080.0" GridPane.columnIndex="2" GridPane.rowIndex="18" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<Label text="اگر دارد ، نوع چیست ؟" />
+<Label alignment="TOP_LEFT" text="چند بار  :" GridPane.rowIndex="1" />
+<TextField GridPane.columnIndex="1" />
+<FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+<children>
+<TextField layoutX="129.0" layoutY="28.0" />
+<Label text="چند وقت پیش :" />
+<TextField layoutX="10.0" layoutY="28.0" />
+</children>
+</FlowPane>
+</children>
+<columnConstraints>
+<ColumnConstraints hgrow="SOMETIMES" maxWidth="254.0" minWidth="10.0" prefWidth="119.0" />
+<ColumnConstraints hgrow="SOMETIMES" maxWidth="399.0" minWidth="10.0" prefWidth="399.0" />
+</columnConstraints>
+<rowConstraints>
+<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+</rowConstraints>
+</GridPane>
+</children>
+</GridPane>
+<Separator layoutX="60.0" layoutY="1851.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox.margin>
+<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+</VBox.margin>
+</Separator>
+<GridPane alignment="TOP_RIGHT" layoutX="50.0" layoutY="40.0" nodeOrientation="RIGHT_TO_LEFT" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<Label text="۱ - یافته های بالینی مهم :" /><TextArea prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+<Label layoutX="10.0" layoutY="17.0" text="۲- یافته های ماموگرافی:" GridPane.rowIndex="2" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<TextArea layoutX="10.0" layoutY="40.0" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<TextArea layoutX="10.0" layoutY="170.0" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<Label layoutX="10.0" layoutY="147.0" text="۳- بافته های سونوگرافی :" GridPane.rowIndex="4" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<Label layoutX="10.0" layoutY="277.0" text="۴- یافته های MRI‌:" GridPane.rowIndex="6" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<TextArea layoutX="10.0" layoutY="300.0" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="7" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<TextArea layoutX="10.0" layoutY="430.0" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="9" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<Label layoutX="10.0" layoutY="407.0" text="۵- نتایج پاتولوژی قبلی:" GridPane.rowIndex="8" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+</children>
+<columnConstraints>
+<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+</columnConstraints>
+<rowConstraints>
+<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+<RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+</rowConstraints>
+</GridPane>
+</children>
+<padding>
+<Insets bottom="30.0" left="40.0" right="40.0" top="30.0" />
+</padding></VBox>
+</content>
+</ScrollPane>
+</children>
+</VBox>
